@@ -10,6 +10,8 @@ public class MyLinkedListTest {
         myLinkedList.insert(myFirstNode, mySecondNode);
         myLinkedList.searchInsertNode(30, insertedNode);
         myLinkedList.printMyNodes();
+        myLinkedList.deleteNode(40);
+        myLinkedList.printMyNodes();
         boolean result = myLinkedList.head.equals(myFirstNode) &&
                          myLinkedList.head.getNext().equals(mySecondNode) &&
                          myLinkedList.tail.equals(myThirdNode);
