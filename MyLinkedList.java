@@ -70,6 +70,11 @@ public class MyLinkedList {
         }
     }
 
+    public void searchInsertNode(Integer value, INode newInsertedNode){
+        INode searchedNode = searchNode(value);
+        insert(searchedNode, newInsertedNode);
+    }
+
     public void printMyNodes() {
         StringBuffer myNodes = new StringBuffer("My Nodes: ");
         INode tempNode = head;
@@ -78,7 +83,7 @@ public class MyLinkedList {
             if (!tempNode.equals(tail)) myNodes.append("=>");
             tempNode = tempNode.getNext();
         }
-        //myNodes.append(tempNode.getKey());
+        myNodes.append(tempNode.getKey());
         System.out.println(myNodes);
     }
 }
