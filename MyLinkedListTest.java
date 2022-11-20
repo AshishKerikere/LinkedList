@@ -7,8 +7,9 @@ public class MyLinkedListTest {
         myLinkedList.add(myFirstNode);
         myLinkedList.append(myThirdNode);
         myLinkedList.insert(myFirstNode, mySecondNode);
-        myLinkedList.popLast();
-        myLinkedList.printMyNodes();
+        INode searchNode = myLinkedList.searchNode(30);
+        System.out.println(searchNode.getKey());
+        //myLinkedList.printMyNodes();
         boolean result = myLinkedList.head.equals(myFirstNode) &&
                          myLinkedList.head.getNext().equals(mySecondNode) &&
                          myLinkedList.tail.equals(myThirdNode);
